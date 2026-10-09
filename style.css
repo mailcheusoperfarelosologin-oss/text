@@ -1,0 +1,28 @@
+:root{--bg:#f3f5f2;--panel:#fff;--ink:#16211c;--muted:#66736c;--line:#d9dfdb;--accent:#0f6b54;--accent-ink:#fff;--mine:#d8efe6;--err:#b3261e}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1512;--panel:#18211d;--ink:#e6eee9;--muted:#8a9a92;--line:#2a3731;--accent:#4cc9a0;--accent-ink:#0b1410;--mine:#1f3a2f;--err:#ff8a80}}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+main{max-width:640px;height:100%;margin:0 auto;display:flex;flex-direction:column;padding:12px}
+h1{font-size:1.4rem;margin:8px 0 4px}
+p.sub{color:var(--muted);margin:0 0 16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:12px}
+label{display:block;font-size:.9rem;color:var(--muted);margin-bottom:4px}
+input,button{font:inherit;border-radius:8px;border:1px solid var(--line);padding:10px 12px}
+input{width:100%;background:var(--bg);color:var(--ink)}
+button{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);cursor:pointer;font-weight:600}
+button.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.row{display:flex;gap:8px}
+.hidden{display:none!important}
+#chat{flex:1;min-height:0;display:flex;flex-direction:column}
+#bar{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0}
+#bar b{font-size:1.05rem}
+#log{flex:1;overflow-y:auto;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.m{max-width:85%;padding:8px 12px;border-radius:12px;background:var(--bg);overflow-wrap:anywhere;white-space:pre-wrap}
+.m.me{align-self:flex-end;background:var(--mine)}
+.m small{display:block;color:var(--muted);font-size:.75rem}
+.sys{align-self:center;color:var(--muted);font-size:.85rem}
+.sys.err{color:var(--err)}
+#form{display:flex;gap:8px;margin-top:8px}
+#err{color:var(--err);min-height:1.4em;margin:8px 0 0}

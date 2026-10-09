@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chat P2P</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <section id="home">
+    <h1>Chat P2P</h1>
+    <p class="sub">Messaggi di testo diretti tra browser, senza account e senza server di chat.</p>
+    <div class="card">
+      <label for="name">Il tuo nome</label>
+      <input id="name" maxlength="24" autocomplete="nickname" placeholder="Es. Marta">
+    </div>
+    <div class="card" id="createBox">
+      <button id="create">Crea una stanza</button>
+    </div>
+    <div class="card">
+      <label for="code">Codice stanza</label>
+      <div class="row"><input id="code" placeholder="Incolla il codice" autocapitalize="off" spellcheck="false"><button id="join">Entra</button></div>
+    </div>
+    <p id="err" role="alert"></p>
+  </section>
+
+  <section id="chat" class="hidden">
+    <div id="bar">
+      <span>Stanza <b id="roomLabel"></b></span>
+      <span class="row"><button class="ghost" id="copy">Copia link</button><button class="ghost" id="leave">Esci</button></span>
+    </div>
+    <div id="log" aria-live="polite"></div>
+    <form id="form" autocomplete="off">
+      <input id="text" placeholder="Scrivi un messaggio" maxlength="2000" aria-label="Messaggio">
+      <button type="submit">Invia</button>
+    </form>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
